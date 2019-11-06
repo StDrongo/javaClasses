@@ -1,0 +1,22 @@
+package homework;
+
+class Main
+{
+	public static void main(String[] args)
+	{
+		int[][] a = {
+				{5,2,3,7},
+				{1,5,1,1},
+				{8,3,1,2}
+			};
+	//should be 8
+	  int max=0;
+			for (int[] i:a) {
+				for (int j:i) {
+				 
+				}
+				
+				}
+			}syso
+
+		}

@@ -1,0 +1,29 @@
+package com.class14;
+
+public class SplitMethod {
+
+	public static void main(String[] args) {
+		
+		//.split()
+		//This method splits this string around matches of the 
+		//given regular expression
+		
+		String str="Video provides a powerful way to "
+				+ "help you prove your point";
+		
+		String[] array=str.split(" ");
+		
+		for(int i=0; i<array.length;i++) {
+			System.out.print(array[i]+" ");
+		}
+		//How can we find how many sentences are in the folowing
+		//string:
+		
+		String str1="Todsy is Sunday. Its sunny day and "
+				+ "we are have a java class";
+		String[] array2 = str1.split(".");
+		System.out.println(str2);
+
+	}
+
+}

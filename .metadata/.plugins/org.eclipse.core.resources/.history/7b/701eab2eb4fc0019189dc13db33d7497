@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Test1 {
+
+	public static void main(String[] args) {
+
+		String str1="Welcome To Syntax Solutions" ;
+	    char[] cha=str1.toCharArray();
+	    for (char output:cha) {
+	      System.out.println(output);
+	    }
+	    
+      
+	
+	
+	}
+}
+
+				
+			
+		
+		
+
+
+
+
+

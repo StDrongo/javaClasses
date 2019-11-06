@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		Scanner s=new Scanner(System.in);
+		int t=s.nextInt();
+		for(int i=0;i<t;i++){
+		String txt=s.next();
+		String temp=txt.toLowerCase();
+		int l=temp.length();
+		int flag=0;
+		for(int j=0;j<l && l%2==0;j++){
+		int len=temp.replace(temp.charAt(j)+"","").length();
+		if(len%2!=0){
+		flag=1;
+		break;
+		}
+		}
+		if(flag==0){
+		System.out.println(txt + " is a doubloon");
+		}else{
+		System.out.println(txt + " is not a doubloon");
+		}
+		}
+	
+	  
+	
+	} 
+	
+	
+	}	
+
+
+		

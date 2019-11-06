@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Test1 {
+
+	public static void main(String[] args) {
+
+		Scanner inp = new Scanner(System.in);
+	    System.out.print("In:");
+	    String word = inp.nextLine();
+	    //write your code below
+	    
+	    char[] name=word.toCharArray();
+		//System.out.println(name);
+	    for (int i=0; i<name.length; i++) {
+	    	System.out.println(name);
+	    }
+	
+	}
+}
+
+				
+			
+		
+		
+
+
+
+
+

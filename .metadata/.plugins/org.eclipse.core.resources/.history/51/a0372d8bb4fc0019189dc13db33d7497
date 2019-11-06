@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Test1 {
+
+	public static void main(String[] args) {
+
+		String s1="hello how are you"; 
+	    
+	    String rep1=s1.replace("h","t");
+	    String rep2=s1.replace("you", "hi");
+	    String rep21=s1.replace("hello how are you", "i am fine");
+	    System.out.println(rep1);
+	    System.out.println(rep2);
+	    System.out.println(rep21);
+	    
+      
+	
+	
+	}
+}
+
+				
+			
+		
+		
+
+
+
+
+
