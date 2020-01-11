@@ -1,24 +1,22 @@
 package com.class14;
 
-public class toCharArrayMethod {
+public class ToCharArrayMethod {
 
 	public static void main(String[] args) {
 
-		//.toCharArray
-		//Convert String to a new character array.
+		/*.toCharArray
+		 * This method converts this string to a new character array.
+		 */
 		
-		String str="Syntax";
-		char[] array=str.toCharArray();
+		 String str="Syntax Technologies";
+	
+		 char[] array = str.toCharArray();
 		
-		for (char i:array) {
-			System.out.print(i);
-		}
-		System.out.println();
-		char b='w';
-		char c='a';
-		System.out.println(b+c);
+		 for(char i:array) {
+			 System.out.println(i);
+		 }
 		
-		
+	
 		
 	}
 

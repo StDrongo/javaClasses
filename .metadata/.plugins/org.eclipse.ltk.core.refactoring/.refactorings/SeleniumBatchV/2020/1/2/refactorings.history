@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;drivers&apos; to &apos;TestNGIntro/drivers&apos;&#x0D;&#x0A;- Original project: &apos;SeleniumBatchV&apos;&#x0D;&#x0A;- Destination element: &apos;TestNGIntro/drivers&apos;&#x0D;&#x0A;- Original element: &apos;drivers&apos;" description="Copy folder" destination="=TestNGIntro/&lt;drivers" element1="drivers" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1578784690643" units="0" version="1.0"/>
+</session>

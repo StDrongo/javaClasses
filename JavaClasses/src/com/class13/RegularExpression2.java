@@ -9,7 +9,7 @@ public class RegularExpression2 {
 		System.out.println(str.replace(" ", ""));
 		System.out.println("***************");
 		System.out.println(str.replaceAll("\\s", ""));
-		
+		//String name="////\Hello";
 		String doc="Video provides a powerful way to help you "
 				+ "prove your point. When you click Online Video,"
 				+ " you can paste in the embed code for the video you "

@@ -2,7 +2,7 @@ package com.class13;
 
 public class RegularExpressions {
 
-public static void main(String[] args) {
+	public static void main(String[] args) {
 /*
  * print only text and not numbers
  */
@@ -20,10 +20,7 @@ public static void main(String[] args) {
 		//Remove everything except text and numbers
 		String str2="Hi#$%How#$%#$4356346";
 		System.out.println(str2.replaceAll("[^a-zA-Z0-9]", ""));
-		System.out.println("=====================");
-
-		System.out.println(str2.replaceAll("\\w", ""));
-		
+		System.out.println("=====================");		
 		
 		
 	}

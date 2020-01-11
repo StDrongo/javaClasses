@@ -4,20 +4,30 @@ public class ReplaceMethodStringClass {
 
 	public static void main(String[] args) {
 
-		/*
-		 * print only text and not numbers
+		/*.replace()
+		 * This method returns a new string resulting 
+		 * from replacing all occurrences of oldChar 
+		 * in this string with newChar.
 		 */
-				
-		String str="14234Hel45645lo465456";//Hello
+		System.out.println("//\\");
+		String str="Hello Dear Dan, how are you Dan, How you been?";
 		
-		System.out.println("=====================");
-				
-		System.out.println(str.replaceAll("[0-9]", ""));//Leave only text
-        System.out.println("=====================");
-        System.out.println(str.replaceAll("[a-zA-Z]", ""));//Leave only numbers 1423445645465456System.out.println("=====================");//Remove everything except text and numbers		String str2="Hi#$%How#$%#$4356346";
-        System.out.println(str.replaceAll("[^a-zA-Z0-9]", ""));
-		System.out.println("=====================");
-		System.out.println(str.replaceAll("\\w", ""));
+		String str1="12-22-1990";//12/22/1990
+		
+		/*.replace()
+		 * This method returns a new string resulting 
+		 * from replacing all occurrences of sequence of string 
+		 * in this string with newCharsequence.
+		 */
+		System.out.println(str.replace('n', 'z'));
+		
+		System.out.println(str1.replace('-', '/'));
+		System.out.println(str1.replaceFirst("-", "/"));
+		
+		System.out.println("=============");
+		System.out.println(str.replace("Dan", "Ben"));
+		System.out.println(str.replaceFirst("Dan", "Ali"));
+		
 		
 		
 		

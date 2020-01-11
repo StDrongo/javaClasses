@@ -4,33 +4,21 @@ public class StringManipulation1 {
 
 	public static void main(String[] args) {
 
-//		Create a String and print it in reverse order 
-//		(Sunday → yadnuS).
-//		
-//		Create a String and if the String is 
-//		not empty perform the following: 
-//		if the String has an odd number 
-//		of characters and has 3 or more 
-//		characters, print the character 
-//		in the middle of the String.
+		//sunstring
+		//This method returns a new string that is a substring of this string. 
+		String str="Java is getting interesting";
 		
-//		String str="Sunday";
-//		
-//		for (int i=str.length()-1; i>=0; i--) {
-//			//System.out.print(str.charAt(i));
-//		}
+		System.out.println(str.substring(10));
+		
+		/*
+		 * String substring(int beginIndex, int endIndex)
+		 * This method returns a new string that is a substring 
+		 * that begins with the character at the specified index 
+		 * and extends to the end of this string 
+		 */
+		System.out.println(str.substring(8, 15));
 		
 		
-		String str1="Helloure";
-		
-		int length=str1.length();
-		int middle = str1.length()/2;
-		
-		if (!str1.isEmpty()) {
-			if (length%2==0 && length>=3) {
-				System.out.println(str1.charAt(middle));
-			}
-		}
 		
 		
 	}
