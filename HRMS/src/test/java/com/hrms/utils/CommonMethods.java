@@ -2,7 +2,6 @@ package com.hrms.utils;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
@@ -13,38 +12,14 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.hrms.testbase.BaseClass;
 
 //command+o--> for mac to see all methods within the class
 //ctrl+o--> for windows
-public class CommonMethods {
-
-	public static WebDriver driver;
-
-	/**
-	 * Use this method in need of opening browser and target url
-	 * 
-	 * @param browser The desired browser
-	 * @param url     The desired url
-	 */
-	public static void setUp(String browser, String url) {
-
-		if (browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.gecko.driver", "drivers//geckodriver.exe");
-			driver = new ChromeDriver();
-		} else if (browser.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "drivers//geckodriver.exe");
-			driver = new FirefoxDriver();
-
-		} else {
-			System.err.println("Browser not supported");
-		}
-		//driver.manage().window().maximize();
-		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get(url);
-	}
+public class CommonMethods extends BaseClass {
 
 	/**
 	 * This method will accept the alert
@@ -137,6 +112,7 @@ public class CommonMethods {
 
 	/**
 	 * This method will click on the element using JSExecutor
+	 * 
 	 * @param element
 	 */
 	public static void jsClick(WebElement element) {
@@ -146,6 +122,7 @@ public class CommonMethods {
 
 	/**
 	 * This method will scroll until until specified element
+	 * 
 	 * @param element
 	 */
 	public static void scrollIntoElement(WebElement element) {
@@ -155,6 +132,7 @@ public class CommonMethods {
 
 	/**
 	 * This method will scroll page down
+	 * 
 	 * @param pixel
 	 */
 	public static void scrollDown(int pixel) {
@@ -164,43 +142,82 @@ public class CommonMethods {
 
 	/**
 	 * This method will scroll page up
+	 * 
 	 * @param pixel
 	 */
 	public static void scrollUp(int pixel) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0, -" + pixel + ")");
 	}
+
 	/**
 	 * This method will take a screenshot
+	 * 
 	 * @param fileName
 	 */
 	public static void takeScreenshot(String fileName) {
-		TakesScreenshot ts=(TakesScreenshot)driver;
-		File file=ts.getScreenshotAs(OutputType.FILE);
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File file = ts.getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file, new File("screenshot/"+fileName+".png"));
+			FileUtils.copyFile(file, new File("screenshot/" + fileName + ".png"));
 		} catch (IOException e) {
 			System.out.println("Cannot take a screenshot");
 		}
 	}
-	
-	
-	
-	
-	
 
-//	public static WebDriver setUp(String browser){
-//		
-//		if(browser.equalsIgnoreCase("chrome")) {
-//			System.setProperty("webdriver.chrome.driver", "drivers/chromeDriver");
-//			driver=new ChromeDriver();
-//		
-//		}else if(browser.equalsIgnoreCase("firefox")) {
-//			System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
-//			driver=new FirefoxDriver();
-//		}
-//		
-//		return driver;
-//	}
+	/**
+	 * This method will enter text
+	 * 
+	 * @param element
+	 * @param value
+	 */
+	public static void sendText(WebElement element, String value) {
+		element.clear();
+		element.sendKeys(value);
+	}
 
+	/**
+	 * This method will create an Object of WebDriverWait
+	 * 
+	 * @return WebDriverWait
+	 */
+	public static WebDriverWait getWaitObject() {
+		WebDriverWait wait = new WebDriverWait(driver, Constants.EXPLICIT_LOAD_TIME);
+		return wait;
+	}
+
+	/**
+	 * This method will wait until element becomes clickable
+	 * 
+	 * @param element
+	 */
+	public static void waitForClickability(WebElement element) {
+		getWaitObject().until(ExpectedConditions.elementToBeClickable(element));
+	}
+
+	/**
+	 * This method will wait until element becomes visible
+	 * 
+	 * @param element
+	 */
+	public static void waitForVisibility(WebElement element) {
+		getWaitObject().until(ExpectedConditions.visibilityOf(element));
+	}
+
+	/**
+	 * This method will wait until element becomes invisible
+	 * 
+	 * @param element
+	 */
+	public static void waitForInvisibility(WebElement element) {
+		getWaitObject().until(ExpectedConditions.invisibilityOf(element));
+	}
+	/**
+	 * This method will click on the element
+	 * @param element
+	 */
+	public static void click(WebElement element) {
+		waitForClickability(element);
+		element.click();
+	}
 }
