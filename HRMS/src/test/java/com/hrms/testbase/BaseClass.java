@@ -20,7 +20,7 @@ public class BaseClass {
 		switch (Constants.BROWSER.toLowerCase()) {
 
 		case "chrome":
-			System.setProperty("webdriver.gecko.driver", Constants.GECKO_DRIVER_PATH);
+			System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
 			driver = new ChromeDriver();
 			break;
 		case "firefox":
