@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12000" started-at="2020-01-18T14:49:00 EST" finished-at="2020-01-18T14:49:12 EST">
+  <suite name="Default suite" duration-ms="8740" started-at="2020-01-19T09:40:01 EST" finished-at="2020-01-19T09:40:09 EST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12000" started-at="2020-01-18T14:49:00 EST" finished-at="2020-01-18T14:49:12 EST">
+    <test name="Default test" duration-ms="8740" started-at="2020-01-19T09:40:01 EST" finished-at="2020-01-19T09:40:09 EST">
       <class name="com.testcases.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.testcases.LoginPageTest@578486a3]" name="setUp" is-config="true" duration-ms="8532" started-at="2020-01-18T14:49:00 EST" finished-at="2020-01-18T14:49:08 EST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.testcases.LoginPageTest@578486a3]" name="setUp" is-config="true" duration-ms="7114" started-at="2020-01-19T09:40:01 EST" finished-at="2020-01-19T09:40:08 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.testcases.LoginPageTest@578486a3]" name="login" duration-ms="2040" started-at="2020-01-18T14:49:08 EST" finished-at="2020-01-18T14:49:10 EST">
+        <test-method status="PASS" signature="negativeLogin()[pri:0, instance:com.testcases.LoginPageTest@578486a3]" name="negativeLogin" duration-ms="328" started-at="2020-01-19T09:40:08 EST" finished-at="2020-01-19T09:40:08 EST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.testcases.LoginPageTest@578486a3]" name="tearDown" is-config="true" duration-ms="1398" started-at="2020-01-18T14:49:10 EST" finished-at="2020-01-18T14:49:12 EST">
+        </test-method> <!-- negativeLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.testcases.LoginPageTest@578486a3]" name="tearDown" is-config="true" duration-ms="1271" started-at="2020-01-19T09:40:08 EST" finished-at="2020-01-19T09:40:09 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

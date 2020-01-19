@@ -3,11 +3,12 @@ package com.testcases;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.hrms.pages.LoginPage;
+import com.hrms.pages.LoginPageElements;
 import com.hrms.utils.CommonMethods;
 
 public class LoginPageTest extends CommonMethods{
 	//Test case to validate valid login
-	@Test
+	//@Test
 	public void login() {
 		LoginPage login=new LoginPage();
 		sendText(login.username, "Admin");
@@ -22,12 +23,13 @@ public class LoginPageTest extends CommonMethods{
 	 * verify "Password cannot be empty" text 
 	 * close browser
 	 */
-	//@Test
-	public void negativeLogin() {
-		LoginPage login=new LoginPage();
+	@Test
+	public void negativeLogin() throws InterruptedException {
+		LoginPageElements login =new LoginPageElements();
 		sendText(login.username, "Admin");
 		click(login.loginBtn);
-		String expected="Password cannot be empty";
-		//Assert.assertEquals(login.errMsg.getText(), expected);
+		String expectedError="Password cannot be empty";
+		Assert.assertEquals(login.errorMsg.getText(), expectedError, "Error message text is not matched");
+		Thread.sleep(5000);
 	}
 }

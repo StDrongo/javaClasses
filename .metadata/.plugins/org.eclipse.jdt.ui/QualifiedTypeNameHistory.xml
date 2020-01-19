@@ -10,6 +10,13 @@
 <fullyQualifiedTypeName name="org.testng.annotations.BeforeTest"/>
 <fullyQualifiedTypeName name="org.testng.annotations.AfterTest"/>
 <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+<fullyQualifiedTypeName name="com.hrms.utils.CommonMethods"/>
+<fullyQualifiedTypeName name="com.testcases.LoginPageTest"/>
+<fullyQualifiedTypeName name="com.hrms.pages.LoginPage"/>
+<fullyQualifiedTypeName name="com.hrms.testbase.BaseClass"/>
+<fullyQualifiedTypeName name="java.net.PasswordAuthentication"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.interactions.ClickAction"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
 <fullyQualifiedTypeName name="org.testng.Assert"/>
 </qualifiedTypeNameHistroy>
