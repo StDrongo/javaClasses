@@ -12,7 +12,7 @@ public class LoginPageTest extends CommonMethods{
 	public void login() {
 		LoginPage login=new LoginPage();
 		sendText(login.username, "Admin");
-		sendText(login.password, "Hum@nhrm123");
+		sendText(login.password, "Syntax@123");
 		click(login.loginBtn);
 	}
 	

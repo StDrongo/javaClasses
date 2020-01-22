@@ -16,7 +16,7 @@ public class LeaveListPageTest extends CommonMethods{
 		LeaveListPageElements leaveList = new LeaveListPageElements();
 		
 		sendText(login.username, "Admin");
-		sendText(login.password, "Hum@nhrm123");
+		sendText(login.password, "Syntax@123");
 		click(login.loginBtn);
 		jsClick(dashboard.leaveLnk);
 		jsClick(dashboard.leaveList);

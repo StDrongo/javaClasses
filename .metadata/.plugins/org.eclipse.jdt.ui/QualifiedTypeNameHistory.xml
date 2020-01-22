@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
@@ -9,14 +8,28 @@
 <fullyQualifiedTypeName name="com.utils.Constants"/>
 <fullyQualifiedTypeName name="org.testng.annotations.BeforeTest"/>
 <fullyQualifiedTypeName name="org.testng.annotations.AfterTest"/>
-<fullyQualifiedTypeName name="org.testng.annotations.Test"/>
-<fullyQualifiedTypeName name="com.hrms.utils.CommonMethods"/>
 <fullyQualifiedTypeName name="com.testcases.LoginPageTest"/>
-<fullyQualifiedTypeName name="com.hrms.pages.LoginPage"/>
-<fullyQualifiedTypeName name="com.hrms.testbase.BaseClass"/>
 <fullyQualifiedTypeName name="java.net.PasswordAuthentication"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.interactions.ClickAction"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.interactions.SendKeysAction"/>
+<fullyQualifiedTypeName name="com.hrms.pages.LeaveListPageElements"/>
+<fullyQualifiedTypeName name="com.hrms.pages.LoginPage"/>
+<fullyQualifiedTypeName name="com.hrms.pages.EmployeeListElements"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
+<fullyQualifiedTypeName name="com.hrms.testbase.BaseClass"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.support.FindBy"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+<fullyQualifiedTypeName name="java.lang.AssertionError"/>
 <fullyQualifiedTypeName name="org.testng.Assert"/>
+<fullyQualifiedTypeName name="com.hrms.utils.CommonMethods"/>
+<fullyQualifiedTypeName name="com.hrms.pages.LoginPageElements"/>
+<fullyQualifiedTypeName name="com.hrms.pages.DashBoardPageElement"/>
+<fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.nio.file.FileAlreadyExistsException"/>
+<fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
 </qualifiedTypeNameHistroy>

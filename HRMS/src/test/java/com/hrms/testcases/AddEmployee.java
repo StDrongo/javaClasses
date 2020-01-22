@@ -19,7 +19,7 @@ public class AddEmployee extends CommonMethods{
 		DashBoardPageElement dashboard = new DashBoardPageElement();
 		EmployeeListElements addEmployee = new EmployeeListElements();
 		
-		login.login("Admin", "Hum@nhrm123");
+		login.login("Admin", "Syntax@123");
 		
 		click(dashboard.pim);
 		click(dashboard.addEmployee);
