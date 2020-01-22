@@ -6,6 +6,7 @@ import com.hrms.pages.DashBoardPageElement;
 import com.hrms.pages.LeaveListPageElements;
 import com.hrms.pages.LoginPageElements;
 import com.hrms.utils.CommonMethods;
+import com.hrms.utils.ConfigsReader;
 
 public class LeaveListPageTest extends CommonMethods{
 	
@@ -15,8 +16,8 @@ public class LeaveListPageTest extends CommonMethods{
 		DashBoardPageElement dashboard = new DashBoardPageElement();
 		LeaveListPageElements leaveList = new LeaveListPageElements();
 		
-		sendText(login.username, "Admin");
-		sendText(login.password, "Syntax@123");
+		sendText(login.username, ConfigsReader.getProperty("username"));
+		sendText(login.password, ConfigsReader.getProperty("password"));
 		click(login.loginBtn);
 		jsClick(dashboard.leaveLnk);
 		jsClick(dashboard.leaveList);
@@ -29,7 +30,7 @@ public class LeaveListPageTest extends CommonMethods{
 		DashBoardPageElement dashboard = new DashBoardPageElement();
 		LeaveListPageElements leaveList = new LeaveListPageElements();
 		
-		login.login("Admin", "Hum@nhrm123");
+		login.login(ConfigsReader.getProperty("username"), ConfigsReader.getProperty("password"));
 		dashboard.navigateToLeaveList();
 		Assert.assertTrue(leaveList.leaveListLbl.isDisplayed(), "Labels is NOT displayed");
 	}
