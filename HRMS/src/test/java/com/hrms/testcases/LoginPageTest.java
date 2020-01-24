@@ -1,6 +1,7 @@
 package com.hrms.testcases;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.hrms.pages.LoginPage;
@@ -8,10 +9,11 @@ import com.hrms.pages.LoginPageElements;
 import com.hrms.utils.CommonMethods;
 import com.hrms.utils.ConfigsReader;
 import com.hrms.utils.Constants;
+import com.hrms.utils.ExcelUtility;
 
 public class LoginPageTest extends CommonMethods {
 	// Test case to validate valid login
-	@Test(groups="smoke")
+	//@Test(groups="smoke")
 	public void login() {
 	
 		LoginPage login = new LoginPage();
@@ -24,7 +26,7 @@ public class LoginPageTest extends CommonMethods {
 	 * Navigate to HRMS Enter uid leave password field blank click login verify
 	 * "Password cannot be empty" text close browser
 	 */
-	@Test(groups="regression")
+	//@Test(groups="regression")
 	public void negativeLogin() throws InterruptedException {
 		LoginPageElements login = new LoginPageElements();
 		sendText(login.username, ConfigsReader.getProperty("username"));
@@ -32,5 +34,20 @@ public class LoginPageTest extends CommonMethods {
 		String expectedError = "Password cannot be empty";
 		Assert.assertEquals(login.errorMsg.getText(), expectedError, "Error message text is not matched");
 		Thread.sleep(5000);
+	}
+	
+	@Test(dataProvider="getData")
+	public void multipleLogin(String uid, String pwd) throws InterruptedException {
+		LoginPageElements login = new LoginPageElements();
+		sendText(login.username, uid );
+		sendText(login.password, pwd);
+		Thread.sleep(3000);
+		click(login.loginBtn);
+		Thread.sleep(3000);
+	}
+	
+	@DataProvider
+	public Object[][] getData(){
+		return ExcelUtility.excelIntoArray(Constants.XL_DATA_FILEPATH, "Login");
 	}
 }
