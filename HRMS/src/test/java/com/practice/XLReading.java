@@ -13,7 +13,7 @@ public class XLReading {
 
 	@Test
 	public void read() throws Exception {
-		String filePath="\\Users\\Home\\eclipse-workspace\\HRMS\\src\\test\\java\\com\\practice\\Hello.xlsx";
+		String filePath="/Users/Syntax/eclipse-workspace/SyntaxBatchV/HRMS/src/test/java/com/practice/Hello.xlsx";
 		FileInputStream fis =new FileInputStream(filePath);
 		//to read excel we need to use different classes
 		//Workbook wbook=HSSFWorkbook() --> 2003 xfiles

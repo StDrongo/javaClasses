@@ -23,7 +23,6 @@
 <fullyQualifiedTypeName name="java.lang.AssertionError"/>
 <fullyQualifiedTypeName name="org.testng.Assert"/>
 <fullyQualifiedTypeName name="com.hrms.utils.CommonMethods"/>
-<fullyQualifiedTypeName name="com.hrms.pages.LoginPageElements"/>
 <fullyQualifiedTypeName name="com.hrms.pages.DashBoardPageElement"/>
 <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
@@ -32,4 +31,7 @@
 <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="com.hrms.utils.Constants"/>
+<fullyQualifiedTypeName name="com.hrms.pages.LoginPageElements"/>
+<fullyQualifiedTypeName name="com.hrms.utils.ConfigsReader"/>
 </qualifiedTypeNameHistroy>
