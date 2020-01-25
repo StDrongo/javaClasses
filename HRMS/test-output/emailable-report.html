@@ -8,11 +8,23 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">446</td><td></td><td></td></tr>
+<tr><th colspan="7">Regression Suite</th></tr>
+<tr><td><a href="#t0">Regression Test</a></td><td class="num">1</td><td class="num attn">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">31,663</td><td>regression</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.practice.XLReading</td><td><a href="#m0">read</a></td><td rowspan="1">1579662765849</td><td rowspan="1">418</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Regression Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.hrms.testcases.LeaveListPageTest</td><td><a href="#m0">leaveLabelvalidation1</a></td><td rowspan="1">1579975248283</td><td rowspan="1">9216</td></tr><tr><th colspan="4">Regression Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.hrms.testcases.AddEmployeePageTest</td><td><a href="#m1">addMultipleEmpoyee</a></td><td rowspan="1">1579975227843</td><td rowspan="1">0</td></tr><tr><th colspan="4">Regression Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.hrms.testcases.LeaveListPageTest</td><td><a href="#m2">leaveLabelvalidation</a></td><td rowspan="1">1579975233573</td><td rowspan="1">8459</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.practice.XLReading#read</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Regression Test</h2><h3 id="m0">com.hrms.testcases.LeaveListPageTest#leaveLabelvalidation1</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: did not expect to find [true] but found [false]
+	at com.hrms.testcases.LeaveListPageTest.leaveLabelvalidation1(LeaveListPageTest.java:39)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.hrms.testcases.AddEmployeePageTest#addMultipleEmpoyee</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.NullPointerException
+	at java.util.ArrayList.forEach(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at com.hrms.utils.ExcelUtility.rowCount(ExcelUtility.java:41)
+	at com.hrms.utils.ExcelUtility.excelIntoArray(ExcelUtility.java:75)
+	at com.hrms.testcases.AddEmployeePageTest.getData(AddEmployeePageTest.java:54)
+	... 25 more
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.hrms.testcases.LeaveListPageTest#leaveLabelvalidation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

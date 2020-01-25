@@ -30,10 +30,10 @@ public class LoginPageElements extends CommonMethods{
 	public LoginPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
 	}
+	
 	public void login(String uid, String pwd) {
 		sendText(username, uid);
 		sendText(password, pwd);
 		click(loginBtn);
 	}
-	
 }

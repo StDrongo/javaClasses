@@ -3,8 +3,9 @@
 <suite name="Regression Suite">
 
 	<listeners>
-		<listener class-name="com.hrms.testbase.Listener"></listener>
+		<listener class-name="com.hrms.testbase.Listener" />
 	</listeners>
+
 	<test name="Regression Test">
 		<groups>
 			<run>
@@ -15,5 +16,4 @@
 			<package name="com.hrms.testcases" />
 		</packages>
 	</test> <!-- Test -->
-
 </suite> <!-- Suite -->

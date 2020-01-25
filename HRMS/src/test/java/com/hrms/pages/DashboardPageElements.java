@@ -7,35 +7,34 @@ import org.openqa.selenium.support.PageFactory;
 import com.hrms.testbase.BaseClass;
 import com.hrms.utils.CommonMethods;
 
-public class DashBoardPageElement extends CommonMethods{
-	
-	@FindBy(linkText="Leave")
+public class DashboardPageElements extends CommonMethods {
+
+	@FindBy(linkText = "Leave")
 	public WebElement leaveLnk;
-	
+
 	@FindBy(linkText = "Leave List")
 	public WebElement leaveList;
-	
+
 	@FindBy(linkText = "PIM")
 	public WebElement pim;
-	
-	@FindBy(xpath = "//a[@id='menu_pim_viewEmployeeList']")
-	public WebElement employeeList;
-	
-	@FindBy(xpath = "//a[@id='menu_pim_addEmployee']")
-	public WebElement addEmployee;
-	
-	public DashBoardPageElement() {
+
+	@FindBy(id = "menu_pim_addEmployee")
+	public WebElement addEmp;
+
+	@FindBy(id = "welcome")
+	public WebElement welcomeLnk;
+
+	public DashboardPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
-	
-	}
-	
-	public void navigateToLeaveList() {
-		click(leaveLnk);
-		click(leaveList);
-	}
-	public void navigateToAddEmployee() {
-		jsClick(pim);
-		jsClick(addEmployee);
 	}
 
+	public void navigateToLeaveList() {
+		jsClick(leaveLnk);
+		jsClick(leaveList);
+	}
+
+	public void navigateToAddEmployee() {
+		jsClick(pim);
+		jsClick(addEmp);
+	}
 }
