@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="528" started-at="2020-01-25T13:38:07 EST" finished-at="2020-01-25T13:38:07 EST">
+  <suite name="Default suite" duration-ms="128" started-at="2020-01-25T13:52:38 EST" finished-at="2020-01-25T13:52:38 EST">
     <groups>
       <group name="regression">
         <method signature="AddEmployeePageTest.addMultipleEmpoyee(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrms.testcases.AddEmployeePageTest@26aa12dd]" name="addMultipleEmpoyee" class="com.hrms.testcases.AddEmployeePageTest"/>
       </group> <!-- regression -->
     </groups>
-    <test name="Default test" duration-ms="528" started-at="2020-01-25T13:38:07 EST" finished-at="2020-01-25T13:38:07 EST">
+    <test name="Default test" duration-ms="128" started-at="2020-01-25T13:52:38 EST" finished-at="2020-01-25T13:52:38 EST">
       <class name="com.hrms.testcases.AddEmployeePageTest">
-        <test-method status="PASS" signature="generateReports()[pri:0, instance:com.hrms.testcases.AddEmployeePageTest@26aa12dd]" name="generateReports" is-config="true" duration-ms="110" started-at="2020-01-25T13:38:07 EST" finished-at="2020-01-25T13:38:07 EST">
+        <test-method status="PASS" signature="generateReports()[pri:0, instance:com.hrms.testcases.AddEmployeePageTest@26aa12dd]" name="generateReports" is-config="true" duration-ms="101" started-at="2020-01-25T13:52:38 EST" finished-at="2020-01-25T13:52:38 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReports -->
-        <test-method status="SKIP" signature="addMultipleEmpoyee(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrms.testcases.AddEmployeePageTest@26aa12dd]" name="addMultipleEmpoyee" duration-ms="0" started-at="2020-01-25T13:38:07 EST" data-provider="getData" finished-at="2020-01-25T13:38:07 EST">
-          <exception class="java.lang.RuntimeException">
+        <test-method status="FAIL" signature="addMultipleEmpoyee(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrms.testcases.AddEmployeePageTest@26aa12dd]" name="addMultipleEmpoyee" duration-ms="0" started-at="2020-01-25T13:52:38 EST" finished-at="2020-01-25T13:52:38 EST">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[java.lang.NullPointerException]]>
+              <![CDATA[
+Cannot inject @Test annotated Method [addMultipleEmpoyee] with [class java.lang.String, class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException
-at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:50)
-at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:820)
+              <![CDATA[org.testng.TestNGException: 
+Cannot inject @Test annotated Method [addMultipleEmpoyee] with [class java.lang.String, class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:458)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:372)
+at org.testng.internal.Parameters.createParameters(Parameters.java:729)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:895)
 at org.testng.internal.Parameters.handleParameters(Parameters.java:762)
 at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:60)
 at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:39)
@@ -47,25 +52,13 @@ at org.testng.TestNG.run(TestNG.java:1000)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException
-at com.hrms.utils.ExcelUtility.rowCount(ExcelUtility.java:41)
-at com.hrms.utils.ExcelUtility.excelIntoArray(ExcelUtility.java:75)
-at com.hrms.testcases.AddEmployeePageTest.getData(AddEmployeePageTest.java:54)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77)
-at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46)
-... 25 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addMultipleEmpoyee -->
-        <test-method status="PASS" signature="writeReport()[pri:0, instance:com.hrms.testcases.AddEmployeePageTest@26aa12dd]" name="writeReport" is-config="true" duration-ms="1" started-at="2020-01-25T13:38:07 EST" finished-at="2020-01-25T13:38:07 EST">
+        <test-method status="PASS" signature="writeReport()[pri:0, instance:com.hrms.testcases.AddEmployeePageTest@26aa12dd]" name="writeReport" is-config="true" duration-ms="3" started-at="2020-01-25T13:52:38 EST" finished-at="2020-01-25T13:52:38 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- writeReport -->
