@@ -27,7 +27,7 @@ public class LeaveListPageTest extends CommonMethods {
 		Assert.assertTrue(leaveList.leaveListLbl.isDisplayed(), "Label is NOT displayed");
 	}
 
-	@Test(groups = "regression")
+	//@Test(groups = "regression")
 	public void leaveLabelvalidation1() {
 		LoginPageElements login = new LoginPageElements();
 		DashboardPageElements dashboard = new DashboardPageElements();
