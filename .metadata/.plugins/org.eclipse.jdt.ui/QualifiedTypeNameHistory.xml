@@ -15,14 +15,11 @@
 <fullyQualifiedTypeName name="com.hrms.pages.LoginPage"/>
 <fullyQualifiedTypeName name="com.hrms.pages.EmployeeListElements"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
-<fullyQualifiedTypeName name="java.lang.AssertionError"/>
 <fullyQualifiedTypeName name="org.testng.Assert"/>
 <fullyQualifiedTypeName name="com.hrms.pages.DashBoardPageElement"/>
 <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
 <fullyQualifiedTypeName name="java.nio.file.FileAlreadyExistsException"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
-<fullyQualifiedTypeName name="com.hrms.pages.LoginPageElements"/>
-<fullyQualifiedTypeName name="com.hrms.utils.ConfigsReader"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
@@ -32,9 +29,20 @@
 <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
 <fullyQualifiedTypeName name="com.hrms.pages.AddEmployeePageElements"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
-<fullyQualifiedTypeName name="com.hrms.testbase.BaseClass"/>
 <fullyQualifiedTypeName name="org.testng.annotations.BeforeTest"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="com.hrms.utils.Constants"/>
+<fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
+<fullyQualifiedTypeName name="io.cucumber.junit.Cucumber"/>
+<fullyQualifiedTypeName name="io.cucumber.junit.CucumberOptions"/>
+<fullyQualifiedTypeName name="io.cucumber.java.en.Given"/>
+<fullyQualifiedTypeName name="com.hrms.utils.ConfigsReader"/>
+<fullyQualifiedTypeName name="io.cucumber.datatable.dependency.com.fasterxml.jackson.databind.Module.SetupContext"/>
 <fullyQualifiedTypeName name="com.hrms.utils.CommonMethods"/>
+<fullyQualifiedTypeName name="com.hrms.utils.Constants"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.remote.ScreenshotException"/>
+<fullyQualifiedTypeName name="com.hrms.pages.LoginPageElements"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="java.lang.AssertionError"/>
+<fullyQualifiedTypeName name="com.hrms.testbase.BaseClass"/>
 </qualifiedTypeNameHistroy>

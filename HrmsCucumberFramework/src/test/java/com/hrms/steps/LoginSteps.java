@@ -6,6 +6,7 @@ import com.hrms.pages.LoginPageElements;
 import com.hrms.testbase.BaseClass;
 import com.hrms.utils.CommonMethods;
 import io.cucumber.java.en.*;
+import junit.framework.Assert;
 
 public class LoginSteps extends CommonMethods{
 	LoginPageElements login;
@@ -32,5 +33,21 @@ public class LoginSteps extends CommonMethods{
 		System.out.println("I am logged in");
 		tearDown();
 	}
+	@When("I enter valid username and invalid password")
+	public void i_enter_valid_username_and_invalid_password() {
+	    login=new LoginPageElements();
+	    sendText(login.username, "Admin");
+	    sendText(login.password, "87HJK");
+	}
 
+	@Then("I see error message")
+	public void i_see_error_message() {
+		boolean error = login.errorMsg.isDisplayed();
+	    Assert.assertTrue("Error message is not displayed", error);
+	}
+	
+	@Then("I close browser")
+	public void i_close_browser() {
+	    BaseClass.tearDown();
+	}
 }
