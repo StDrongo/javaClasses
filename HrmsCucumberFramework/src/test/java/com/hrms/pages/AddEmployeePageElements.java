@@ -35,7 +35,9 @@ public class AddEmployeePageElements {
 	@FindBy(id = "employeeId")
 	public WebElement empId;
 	
-	
+	@FindBy(xpath = "//li[@class='line nameContainer']//li[1]//span[1]")
+	public WebElement nameRequired;
+		
 	public AddEmployeePageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
 	}

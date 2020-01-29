@@ -13,7 +13,7 @@ public class PersonalDetailsPageElements {
 	@FindBy(xpath="//div[@id='profile-pic']/h1")
 	public WebElement nameOnPicture;
 	
-	@FindBy(id="personal_txtEmployeeId")
+	@FindBy(id = "personal_txtEmployeeId")
 	public WebElement empId;
 	
 	public PersonalDetailsPageElements() {

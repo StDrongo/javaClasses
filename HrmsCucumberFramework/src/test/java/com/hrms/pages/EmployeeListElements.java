@@ -23,9 +23,14 @@ public class EmployeeListElements {
 	@FindBy(linkText = "Personal Details")
 	public WebElement personalDetails;
 	
+	@FindBy(css = "div:nth-child(3) div.box.pimPane:nth-child(1) div:nth-child(1) div:nth-child(1) > h1:nth-child(1)")
+	public WebElement emloyeesName;
+	
+	@FindBy(id = "personal_txtEmployeeId")
+	public WebElement employeeId;
+	
 	public EmployeeListElements() {
 		PageFactory.initElements(BaseClass.driver, this);
 	}
+}	
 	
-
-}

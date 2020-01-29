@@ -24,6 +24,9 @@ public class DashboardPageElements extends CommonMethods {
 	@FindBy(id = "welcome")
 	public WebElement welcomeLnk;
 
+	@FindBy(id = "menu_core_viewDefinedPredefinedReports")
+	public WebElement reports;
+	
 	public DashboardPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
 	}
@@ -36,5 +39,10 @@ public class DashboardPageElements extends CommonMethods {
 	public void navigateToAddEmployee() {
 		jsClick(pim);
 		jsClick(addEmp);
+	}
+	
+	public void navigateToSearchReport() {
+		jsClick(pim);
+		jsClick(reports);
 	}
 }
