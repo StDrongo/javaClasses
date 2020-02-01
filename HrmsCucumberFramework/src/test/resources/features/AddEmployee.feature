@@ -25,8 +25,19 @@ Feature: Add Employee
       | Sasha     | J          | Smith    |
       | David     | J          | Smith    |
 
+  @inProgress
+  Scenario: Add and Modify Employee Details
+    When I enter employee details
+      | FirstName | MiddleName | LastName |
+      | John      | J          | Smith    |
+    And I click Save
+    Then I am able to modify Employee Details
+      | DriverLisence | ExpirationDate | SSN         | SIN     | Gender | MaritalStatus | Nationality | DOB        |
+      | N78787886     | 2021-12-08     | 123-45-6789 | 7687687 | Male   | Other         | Afghan      | 1980-10-10 |
+      | Nuy89889800   | 2018-12-08     | yiy-45-6789 | uyiy    | Female | Married       | Burmese     | 1980-10-10 |
+
   Scenario: Add Employee without employee id
-    When I add "John", "S" and "Smith"
+    When I add firstName, middleName and last name
     And I delete employee id
     And I click Save
     Then I see employee without employee id is being added
@@ -35,13 +46,9 @@ Feature: Add Employee
     When I click Save
     Then I see required error message next to the first and last name
 
-  Scenario Outline: AddEmployee and Login Credentials
-    When I add "<FirstName>", "<MiddleName>" and "<LastName>"
+  Scenario: AddEmployee and Login Credentials
+    When I add firstName, middleName and last name
     And I click on create login checkbox
-    And I enter "EmployeeJame", "qQ1!wW2@" and "qQ1!wW2@"
+    And I enter username, password and confirm password
     When I click Save
     Then I see Employee has been succesfully added
-
-    Examples: 
-      | FirstName | MiddleName | LastName |
-      | James     | J          | Smith    |
