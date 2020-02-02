@@ -1,4 +1,3 @@
-#Author: syntax team (asel@syntaxtechs.com)
 @sprint2 @addemployee
 Feature: Add Employee
 

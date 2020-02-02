@@ -1,7 +1,5 @@
-#Autor: stdrongo@gmail.com
-@sprint3 @reportsearch
-Feature: Report
-
+#Feature: Report
+#
   #Background: 
     #Given I am logged into HRMS
     #And I navigated to the Reports Page

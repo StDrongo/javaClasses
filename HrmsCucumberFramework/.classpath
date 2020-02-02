@@ -30,5 +30,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Home/Documents/JarFiles/Selenium/client-combined-3.141.59.jar"/>
+	<classpathentry kind="src" path="/HRMS"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
