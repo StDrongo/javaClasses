@@ -8,25 +8,30 @@ import com.hrms.testbase.BaseClass;
 
 public class ReportPageElements {
 	
-	@FindBy(id = "search_search")
-	public WebElement search;
+	@FindBy(id="search_search")
+	public WebElement searchbox;
 	
-	@FindBy(xpath = "//input[@name='_search']")
-	public WebElement clickSearch;
+	@FindBy(className="searchBtn")
+	public WebElement searchBtn;
 	
-	@FindBy(xpath = "//td[contains(text(),'No Records Found')]")
-	public WebElement noRecord;
+	@FindBy(className="reset")
+	public WebElement resetBtn;
 	
-	@FindBy(xpath = "//td[contains(text(),'PIM Sample Report')]")
-	public WebElement founded;
+	@FindBy(id="btnAdd")
+	public WebElement addBtn;
+	
+	@FindBy(id="btnDelete")
+	public WebElement deleteBtn;
+	
+	@FindBy(xpath="//table/tbody/tr/td[2]")
+	public WebElement validSearchRst;
+	
+	@FindBy (xpath="//table/tbody/tr/td")
+	public WebElement invalidSearchRst;
+	
 	
 	public ReportPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
 	}
-	
-	
-	
-	
-	
 
 }

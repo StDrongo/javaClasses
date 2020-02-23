@@ -3,11 +3,13 @@ package com.hrms.utils;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchFrameException;
@@ -241,12 +243,12 @@ public class CommonMethods extends PageInitiliazer {
 	}
 
 	/**
-	 * This method will select value from DD
+	 * This method will select value from DropDown
 	 * 
 	 * @param element
 	 * @param visibleText
 	 */
-	public static void selectDdValue(WebElement element, String visibleText) {
+	public static void selectDropddownValue(WebElement element, String visibleText) {
 		Select select = new Select(element);
 		List<WebElement> options = select.getOptions();
 
@@ -270,7 +272,7 @@ public class CommonMethods extends PageInitiliazer {
 	 * @param element
 	 * @param index
 	 */
-	public static void selectDdValue(WebElement element, int index) {
+	public static void selectDropddownValueByIndex(WebElement element, int index) {
 		Select select = new Select(element);
 		List<WebElement> options = select.getOptions();
 		boolean isFound = false;
@@ -300,5 +302,64 @@ public class CommonMethods extends PageInitiliazer {
 			}
 		}
 	}
+	
+	/**
+	 * This method will select the specified day from Calendar Table
+	 * @param table
+	 * @param day
+	 */
+	  public static void selectDateFromTable (WebElement table , String day) {
+	         List<WebElement> rows = table.findElements(By.xpath("./tbody/tr"));
+	         List<WebElement> cells = new ArrayList<>();
+	         boolean daySelected = false;
+	         for(WebElement row : rows) {
+	             if(row.getText().contains(day)) {
+	                 cells = row.findElements(By.xpath("./td/a"));
+	                 break;
+	             }
+	         }
+	         for(WebElement cell : cells) {
+	             if(cell.getText().equals(day)) {
+	                 jsClick(cell);
+	                 daySelected = true;
+	                 break;
+	             }
+	         }
+	         if(!daySelected) {
+	             System.out.println("The specified day could not be selected from the calendar.");
+	         }
+	         
+	     }
+	   /**
+	      * This method will select the option with the given index from the specified dropdown
+	      * @param element
+	      * @param index
+	      */
+	     public static void selectDropdownByIndex (WebElement element , int index) {
+	             Select s = new Select(element);
+	             List<WebElement> options = s.getOptions();
+	             boolean isFound = false;
+	             if(options.size()>index) {
+	                 s.selectByIndex(index);
+	                 isFound = true;
+	             }
+	             
+	             if(!isFound) {
+	                 System.out.println("The option with index " + index + " could not be selected.");
+	             }
+	     }
+	     /**
+	      * This method will select the given text among visible texts within the given dropdown element - by Esra
+	      * @param element
+	      * @param text
+	      */
+	     public static void selectDropdownByText (WebElement element , String text) {
+	         try {
+	             Select s = new Select(element);
+	             s.selectByVisibleText(text);
+	         }catch(Exception e){
+	             System.out.println("Value could not be found within the dropdown options.");
+	         }
+	     }
 
 }

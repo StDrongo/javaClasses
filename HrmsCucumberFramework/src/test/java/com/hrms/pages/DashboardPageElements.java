@@ -8,41 +8,42 @@ import com.hrms.testbase.BaseClass;
 import com.hrms.utils.CommonMethods;
 
 public class DashboardPageElements extends CommonMethods {
-
-	@FindBy(linkText = "Leave")
+	
+	@FindBy(id="welcome")
+	public WebElement welcomeLnk;
+	
+	@FindBy(linkText="Leave")
 	public WebElement leaveLnk;
-
-	@FindBy(linkText = "Leave List")
+	
+	@FindBy(linkText="Leave List")
 	public WebElement leaveList;
-
+	
 	@FindBy(linkText = "PIM")
 	public WebElement pim;
-
+	
 	@FindBy(id = "menu_pim_addEmployee")
 	public WebElement addEmp;
-
-	@FindBy(id = "welcome")
-	public WebElement welcomeLnk;
-
+	
 	@FindBy(id = "menu_core_viewDefinedPredefinedReports")
-	public WebElement reports;
+	public WebElement reportsLink;
+	
 	
 	public DashboardPageElements() {
-		PageFactory.initElements(BaseClass.driver, this);
+		PageFactory.initElements(BaseClass.driver,this);
 	}
-
+	
 	public void navigateToLeaveList() {
-		jsClick(leaveLnk);
-		jsClick(leaveList);
+		click(leaveLnk);
+		click(leaveList);
 	}
 
 	public void navigateToAddEmployee() {
 		jsClick(pim);
 		jsClick(addEmp);
 	}
-	
-	public void navigateToSearchReport() {
+	public void navigateToReportsPage() {
 		jsClick(pim);
-		jsClick(reports);
+		jsClick(reportsLink);
 	}
+
 }

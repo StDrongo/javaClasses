@@ -1,9 +1,9 @@
 @sprint2 @addemployee
 Feature: Add Employee
 
-  Background: 
-    Given I am logged into HRMS
-    And I navigated to Add Employee Page
+  #Background: 
+    #Given I am logged into HRMS
+    #And I navigated to Add Employee Page
 
   @smoke
   Scenario: Add new Employee
