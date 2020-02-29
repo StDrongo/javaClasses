@@ -2,6 +2,8 @@ package com.hrms.utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -22,7 +24,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.hrms.testbase.BaseClass;
 import com.hrms.testbase.PageInitiliazer;
-
+import java.nio.file.Files;
+import java.nio.file.Paths;
 //command+o--> for mac to see all methods within the class
 //ctrl+o--> for windows
 public class CommonMethods extends PageInitiliazer {
@@ -360,6 +363,17 @@ public class CommonMethods extends PageInitiliazer {
 	         }catch(Exception e){
 	             System.out.println("Value could not be found within the dropdown options.");
 	         }
+	     }
+	     
+	     static String jsonFile;
+	     public static String readJson(String fileName) {
+	    	 
+	    	 try {
+	    		 jsonFile = new String(Files.readAllBytes(Paths.get(fileName)));
+	    	 } catch (IOException e) {
+	    		 e.printStackTrace();
+	    	 }
+	    	 return jsonFile;
 	     }
 
 }
