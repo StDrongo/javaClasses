@@ -16,7 +16,6 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.hrms.utils.ConfigsReader;
 import com.hrms.utils.Constants;
-import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
 
 public class BaseClass {
 
