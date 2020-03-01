@@ -26,16 +26,13 @@ public class CreateEmployeeAPI {
 	public void user_retrieves_response() {
 		
 		response = request.post("http://54.167.125.15/syntaxapi/api/createEmployee.php"); 
-				
 		
-	   
 	}
 
 	@Then("Status code is {int}")
 	public void status_code_is(Integer int1) {
 	  
 		//response.then().assertThat().statusCode(int1);
-		
 		
 	}
 
