@@ -6,5 +6,5 @@ Given user generates token
 Scenario: This test will check to see if an Employee is created
 Given user calls createEmployee API
 When User retrieves response 
-Then Status code is 200
-Then User validates employee is created
+Then status code is 200
+Then user validates employee is created
