@@ -17,7 +17,7 @@ import cucumber.api.junit.Cucumber;
 			,dryRun = false
 			,monochrome=true
 			,plugin="pretty"
-			,tags = "@SyntaxHRMSAPIEndToEnd22")
+			,tags = "@GoRest")
 
 public class APIRunner {
 
